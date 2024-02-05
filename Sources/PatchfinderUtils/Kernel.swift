@@ -148,7 +148,9 @@ public extension MachO {
         
         if let path = getKernelcachePath() {
             if let decomp = loadImg4Kernel(path: path) {
-                return try? MachO(fromData: decomp, okToLoadFAT: false)
+                if let machO = try? MachO(fromData: decomp, okToLoadFAT: false) {
+                    return machO
+                }
             }
         }
         
