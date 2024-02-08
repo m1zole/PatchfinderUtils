@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "PatchfinderUtils",
     platforms: [
-        .iOS(.v13),
+        .iOS(.v12),
         .macOS(.v11)
     ],
     products: [
